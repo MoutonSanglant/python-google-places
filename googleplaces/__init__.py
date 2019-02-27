@@ -641,7 +641,7 @@ class Prediction(object):
         self._id = prediction['id']
         self._matched_substrings = prediction['matched_substrings']
         self._place_id = prediction['place_id']
-        self._reference = prediction['reference']
+        self._reference = prediction.get('reference')
         self._terms = prediction['terms']
         self._types = prediction.get('types',[])
         if prediction.get('_description') is None:
